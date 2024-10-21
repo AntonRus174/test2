@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-
+  List<int> ww = [1, 2, 3];
   Future _incrementCounter(int a) async {
     await Future.delayed(const Duration(seconds: 3));
     int b = _counter * 65888855;
@@ -53,18 +53,22 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ...ww.map((e) => Text("${e}asas")),
             const Text(
-              'You have pushed the button this many times:',
+              '222222You have pushed the button this many times:',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const Column(
+              children: [Text.rich(TextSpan())],
+            )
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter(1),
+        onPressed: () => _incrementCounter(1), //исправь ошибку
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
