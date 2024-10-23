@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             ...ww.map((e) => Text("${e}asas")),
             const Text(
-              '222222You have pushed the button this many times:',
+              'ПРИВЕТYou have pushed the button this many times:',
             ),
             Text(
               '$_counter',
